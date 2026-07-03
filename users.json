@@ -1,0 +1,34 @@
+[
+  {
+    "username": "admin",
+    "email": "gamethu179@gmail.com",
+    "password": "tiendat"
+  },
+  {
+    "username": "datdzvip2004",
+    "email": "nguyentiendat.qc2004@gmail.com",
+    "password": "123"
+  },
+  {
+    "username": "verifyuser",
+    "email": "verify@example.com",
+    "password": "StrongPass123!"
+  },
+  {
+    "username": "ad1",
+    "email": "nguyentiendatqc2004@gmail.com",
+    "password": "123"
+  },
+  {
+    "fullName": "Test User",
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "Password123"
+  },
+  {
+    "fullName": "tien dat",
+    "username": "gamethu179",
+    "email": "gamethu1790@gmail.com",
+    "password": "Dat2004@"
+  }
+]

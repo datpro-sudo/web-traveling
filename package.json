@@ -1,0 +1,9 @@
+{
+  "name": "node-login-demo",
+  "version": "1.0.0",
+  "description": "Simple Node.js login page demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

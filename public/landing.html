@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velora — Premium Travel Experiences</title>
+    <meta name="description" content="Discover extraordinary journeys crafted for modern explorers. Premium travel experiences, curated destinations, and luxury escapes." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <header class="navbar" id="navbar" role="banner">
+      <div class="navbar-inner">
+        <a class="navbar-brand" href="/" aria-label="Velora Home">
+          <svg class="navbar-logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="url(#logoGrad)" />
+            <path d="M10 18l4-8 4 8" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M8 20h16" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+          </svg>
+          <span class="navbar-brand-text">Velora</span>
+        </a>
+
+        <nav class="navbar-nav" aria-label="Primary navigation">
+          <a href="#destinations" class="nav-item">Destinations</a>
+          <a href="#tours" class="nav-item">Tours</a>
+          <a href="#experiences" class="nav-item">Experiences</a>
+          <a href="#promotions" class="nav-item">Promotions</a>
+          <a href="#blog" class="nav-item">Blog</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+
+        <div class="navbar-actions">
+          <div id="authControls" class="auth-controls">
+            <button id="authButton" class="nav-link auth-toggle" data-mode="login" type="button">Sign in</button>
+            <button class="navbar-cta auth-toggle" data-mode="register" type="button">Get started</button>
+          </div>
+          <div id="userMenuWrapper" class="user-menu-wrapper hidden" aria-hidden="true">
+            <button id="userMenuButton" class="user-menu-button" type="button" aria-haspopup="menu" aria-expanded="false">
+              <span id="userAvatar" class="user-avatar">NA</span>
+              <span class="user-meta">
+                <span id="userNameLabel" class="user-name">Guest</span>
+              </span>
+              <span class="user-caret">▾</span>
+            </button>
+            <div id="userDropdown" class="user-dropdown" role="menu" aria-hidden="true">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">My Bookings</a>
+              <a class="dropdown-item" href="#">Wishlist</a>
+              <button id="logoutButton" class="dropdown-item danger" type="button">Logout</button>
+            </div>
+          </div>
+          <button class="navbar-hamburger" id="navHamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="navbar-mobile" id="navMobile" aria-hidden="true">
+        <a href="#destinations" class="nav-item">Destinations</a>
+        <a href="#tours" class="nav-item">Tours</a>
+        <a href="#experiences" class="nav-item">Experiences</a>
+        <a href="#promotions" class="nav-item">Promotions</a>
+        <a href="#blog" class="nav-item">Blog</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero" id="hero">
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-overlay"></div>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=85" media="(min-width: 1200px)" />
+            <source srcset="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" media="(min-width: 768px)" />
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=75" alt="Tropical beach paradise with crystal clear water" loading="eager" />
+          </table>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-text-col">
+            <span class="hero-badge">✦ Curated journeys since 2018</span>
+            <h1 class="hero-title">Discover the world's most extraordinary places</h1>
+            <p class="hero-subtitle">Private villas, intimate experiences, and local experts to guide every moment of your journey.</p>
+            <div class="hero-actions">
+              <a href="#destinations" class="btn btn-primary btn-large">
+                Explore destinations
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+              <button class="btn btn-ghost btn-large auth-toggle" data-mode="register" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Watch film
+              </button>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-value">150+</span>
+                <span class="hero-stat-label">Countries</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">50K</span>
+                <span class="hero-stat-label">Travelers</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">4.9</span>
+                <span class="hero-stat-label">Avg. Rating</span>
+              </div>
+            </div>
+
+            <div class="hero-trust">
+              <span class="trust-label">Trusted by travelers worldwide</span>
+              <div class="trust-logos">
+                <span class="trust-badge">★ TripAdvisor</span>
+                <span class="trust-badge">★ Booking.com</span>
+                <span class="trust-badge">★ Google</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-search-col">
+            <div class="search-card">
+              <div class="search-card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <span>Find your perfect trip</span>
+              </div>
+              <form class="search-card-form" role="search" aria-label="Travel search">
+                <div class="search-field search-field-destination">
+                  <label for="searchDestination">Destination</label>
+                  <div class="search-input-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <input id="searchDestination" type="text" placeholder="Where are you going?" autocomplete="off" />
+                  </div>
+                </div>
+                <div class="search-field search-field-departure">
+                  <label for="searchDate">Departure</label>
+                  <div class="search-input-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <input id="searchDate" type="text" placeholder="Select dates" autocomplete="off" />
+                  </div>
+                </div>
+                <div class="search-field search-field-travelers">
+                  <label for="searchGuests">Travelers</label>
+                  <div class="search-input-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    <input id="searchGuests" type="text" placeholder="2 guests" autocomplete="off" />
+                  </div>
+                </div>
+                <div class="search-field search-field-budget">
+                  <label for="searchBudget">Budget per person</label>
+                  <div class="search-input-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    <input id="searchBudget" type="text" placeholder="Any budget" autocomplete="off" />
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block search-submit" aria-label="Search trips">
+                  <span class="search-submit-content">
+                    <span class="search-submit-text">Search trips</span>
+                    <span class="search-submit-icon" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </span>
+                  </span>
+                  <span class="search-submit-loader" aria-hidden="true">
+                    <svg class="search-submit-spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+                    <span>Searching...</span>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== POPULAR DESTINATIONS ===== -->
+      <section class="section" id="destinations">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">Popular destinations</span>
+              <h2 class="section-title">Curated places that feel extraordinary</h2>
+            </div>
+            <a href="#" class="btn btn-outline btn-small">View all →</a>
+          </div>
+          <div class="destinations-grid">
+            <article class="destination-card" tabindex="0">
+              <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80" alt="Maldives overwater villas" loading="lazy" />
+                <div class="destination-image-overlay"></div>
+                <span class="destination-rating">★ 4.9</span>
+                <span class="destination-price">From $2,180</span>
+              </div>
+              <div class="destination-body">
+                <h3 class="destination-name">Maldives</h3>
+                <p class="destination-desc">Ocean-view villas and private transfers</p>
+                <div class="destination-meta">
+                  <span class="destination-location">Indian Ocean</span>
+                  <a href="#" class="destination-link">Explore →</a>
+                </div>
+              </div>
+            </article>
+            <article class="destination-card" tabindex="0">
+              <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Kyoto Japan temple" loading="lazy" />
+                <div class="destination-image-overlay"></div>
+                <span class="destination-rating">★ 4.8</span>
+                <span class="destination-price">From $1,540</span>
+              </div>
+              <div class="destination-body">
+                <h3 class="destination-name">Kyoto</h3>
+                <p class="destination-desc">Temple stays, seasonal cuisine, hidden gardens</p>
+                <div class="destination-meta">
+                  <span class="destination-location">Japan</span>
+                  <a href="#" class="destination-link">Explore →</a>
+                </div>
+              </div>
+            </article>
+            <article class="destination-card" tabindex="0">
+              <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Patagonia mountains" loading="lazy" />
+                <div class="destination-image-overlay"></div>
+                <span class="destination-rating">★ 4.9</span>
+                <span class="destination-price">From $2,980</span>
+              </div>
+              <div class="destination-body">
+                <h3 class="destination-name">Patagonia</h3>
+                <p class="destination-desc">Glacier trails and luxury lodges in the wild</p>
+                <div class="destination-meta">
+                  <span class="destination-location">Chile</span>
+                  <a href="#" class="destination-link">Explore →</a>
+                </div>
+              </div>
+            </article>
+            <article class="destination-card" tabindex="0">
+              <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris cityscape" loading="lazy" />
+                <div class="destination-image-overlay"></div>
+                <span class="destination-rating">★ 4.7</span>
+                <span class="destination-price">From $1,890</span>
+              </div>
+              <div class="destination-body">
+                <h3 class="destination-name">Paris</h3>
+                <p class="destination-desc">Romantic escapes and world-class cuisine</p>
+                <div class="destination-meta">
+                  <span class="destination-location">France</span>
+                  <a href="#" class="destination-link">Explore →</a>
+                </div>
+              </div>
+            </article>
+            <article class="destination-card" tabindex="0">
+              <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Bali rice terraces" loading="lazy" />
+                <div class="destination-image-overlay"></div>
+                <span class="destination-rating">★ 4.8</span>
+                <span class="destination-price">From $980</span>
+              </div>
+              <div class="destination-body">
+                <h3 class="destination-name">Bali</h3>
+                <p class="destination-desc">Tropical paradise with spiritual wellness</p>
+                <div class="destination-meta">
+                  <span class="destination-location">Indonesia</span>
+                  <a href="#" class="destination-link">Explore →</a>
+                </div>
+              </div>
+            </article>
+            <article class="destination-card" tabindex="0">
+              <div class="destination-image">
+                <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=800&q=80" alt="Santorini Greece" loading="lazy" />
+                <div class="destination-image-overlay"></div>
+                <span class="destination-rating">★ 4.9</span>
+                <span class="destination-price">From $2,450</span>
+              </div>
+              <div class="destination-body">
+                <h3 class="destination-name">Santorini</h3>
+                <p class="destination-desc">Iconic sunsets and Aegean luxury</p>
+                <div class="destination-meta">
+                  <span class="destination-location">Greece</span>
+                  <a href="#" class="destination-link">Explore →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURED TOURS ===== -->
+      <section class="section section-alt" id="tours">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">Featured tours</span>
+              <h2 class="section-title">Signature journeys beyond the ordinary</h2>
+            </div>
+            <a href="#" class="btn btn-outline btn-small">All tours →</a>
+          </div>
+          <div class="tours-grid">
+            <article class="tour-card" tabindex="0">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Alpine mountain retreat" loading="lazy" />
+                <span class="tour-badge">Best seller</span>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta-row">
+                  <span class="tour-duration">7 days</span>
+                  <span class="tour-difficulty easy">Easy</span>
+                </div>
+                <h3 class="tour-name">Alpine Retreat</h3>
+                <p class="tour-desc">Scenic rail journeys, spa stays, and panoramic dining in the Swiss Alps.</p>
+                <div class="tour-footer">
+                  <div class="tour-price">
+                    <span class="tour-price-label">From</span>
+                    <span class="tour-price-value">$1,890</span>
+                  </div>
+                  <div class="tour-meta-right">
+                    <span class="tour-rating">★ 4.9</span>
+                    <span class="tour-seats">12 seats left</span>
+                  </div>
+                  <a href="#" class="btn btn-primary btn-small">Book now</a>
+                </div>
+              </div>
+            </article>
+            <article class="tour-card" tabindex="0">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Desert luxury camp" loading="lazy" />
+                <span class="tour-badge">Popular</span>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta-row">
+                  <span class="tour-duration">10 days</span>
+                  <span class="tour-difficulty moderate">Moderate</span>
+                </div>
+                <h3 class="tour-name">Desert Nomad Escape</h3>
+                <p class="tour-desc">Luxury camps, stargazing, and immersive local culture in Morocco.</p>
+                <div class="tour-footer">
+                  <div class="tour-price">
+                    <span class="tour-price-label">From</span>
+                    <span class="tour-price-value">$2,420</span>
+                  </div>
+                  <div class="tour-meta-right">
+                    <span class="tour-rating">★ 4.8</span>
+                    <span class="tour-seats">8 seats left</span>
+                  </div>
+                  <a href="#" class="btn btn-primary btn-small">Book now</a>
+                </div>
+              </div>
+            </article>
+            <article class="tour-card" tabindex="0">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80" alt="Island luxury catamaran" loading="lazy" />
+                <span class="tour-badge">New</span>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta-row">
+                  <span class="tour-duration">5 days</span>
+                  <span class="tour-difficulty easy">Easy</span>
+                </div>
+                <h3 class="tour-name">Island Luxury</h3>
+                <p class="tour-desc">Catamaran sailing, reef excursions, and sunset dinners in the Maldives.</p>
+                <div class="tour-footer">
+                  <div class="tour-price">
+                    <span class="tour-price-label">From</span>
+                    <span class="tour-price-value">$1,690</span>
+                  </div>
+                  <div class="tour-meta-right">
+                    <span class="tour-rating">★ 4.9</span>
+                    <span class="tour-seats">6 seats left</span>
+                  </div>
+                  <a href="#" class="btn btn-primary btn-small">Book now</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== WHY CHOOSE US ===== -->
+      <section class="section" id="experiences">
+        <div class="container">
+          <div class="section-header section-header-center">
+            <span class="section-eyebrow">Why Velora</span>
+            <h2 class="section-title">Designed for seamless, extraordinary travel</h2>
+            <p class="section-desc">Every detail is crafted to make your journey effortless and unforgettable.</p>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <div class="feature-icon feature-icon-safe">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="feature-title">Safe & Secure</h3>
+              <p class="feature-desc">Protected payments, verified accommodations, and 24/7 emergency support.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon feature-icon-pro">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="feature-title">Professional Guides</h3>
+              <p class="feature-desc">Handpicked local experts with deep cultural insight and language fluency.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon feature-icon-flex">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="feature-title">Flexible Booking</h3>
+              <p class="feature-desc">Free cancellations, date changes, and personalized itinerary adjustments.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon feature-icon-price">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              </div>
+              <h3 class="feature-title">Best Price Guarantee</h3>
+              <p class="feature-desc">Transparent pricing with price-match assurance and exclusive member deals.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon feature-icon-support">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <h3 class="feature-title">24/7 Concierge</h3>
+              <p class="feature-desc">Always available before and during your trip — real humans, real help.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon feature-icon-sustainable">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <h3 class="feature-title">Sustainable Travel</h3>
+              <p class="feature-desc">Carbon-offset programs and eco-certified partners for responsible tourism.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TRAVEL CATEGORIES ===== -->
+      <section class="section section-alt" id="categories">
+        <div class="container">
+          <div class="section-header section-header-center">
+            <span class="section-eyebrow">Explore by style</span>
+            <h2 class="section-title">Find your perfect way to travel</h2>
+            <p class="section-desc">From tropical beaches to mountain peaks — discover experiences crafted for every kind of explorer.</p>
+          </div>
+          <div class="categories-grid">
+            <article class="category-card category-card-featured" tabindex="0">
+              <a href="#" class="category-link" aria-label="Beach Escapes — 24 tours available">
+                <div class="category-image">
+                  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Turquoise tropical beach with palm trees" loading="lazy" />
+                  <div class="category-overlay"></div>
+                </div>
+                <div class="category-body">
+                  <div class="category-body-inner">
+                    <h3 class="category-name">Beach Escapes</h3>
+                    <p class="category-desc">Crystal clear water and tropical paradise</p>
+                    <div class="category-footer">
+                      <span class="category-count">24 tours</span>
+                      <span class="category-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="category-card" tabindex="0">
+              <a href="#" class="category-link" aria-label="Mountain Adventures — 18 tours available">
+                <div class="category-image">
+                  <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Snow-capped mountain peaks at sunrise" loading="lazy" />
+                  <div class="category-overlay"></div>
+                </div>
+                <div class="category-body">
+                  <div class="category-body-inner">
+                    <h3 class="category-name">Mountain Adventures</h3>
+                    <p class="category-desc">Nature, hiking and breathtaking views</p>
+                    <div class="category-footer">
+                      <span class="category-count">18 tours</span>
+                      <span class="category-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="category-card" tabindex="0">
+              <a href="#" class="category-link" aria-label="Luxury Retreats — 42 tours available">
+                <div class="category-image">
+                  <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="Luxury resort infinity pool overlooking ocean" loading="lazy" />
+                  <div class="category-overlay"></div>
+                </div>
+                <div class="category-body">
+                  <div class="category-body-inner">
+                    <h3 class="category-name">Luxury Retreats</h3>
+                    <p class="category-desc">Private villas and premium experiences</p>
+                    <div class="category-footer">
+                      <span class="category-count">42 tours</span>
+                      <span class="category-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="category-card" tabindex="0">
+              <a href="#" class="category-link" aria-label="Cultural Journeys — 27 tours available">
+                <div class="category-image">
+                  <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Traditional Japanese temple in Kyoto" loading="lazy" />
+                  <div class="category-overlay"></div>
+                </div>
+                <div class="category-body">
+                  <div class="category-body-inner">
+                    <h3 class="category-name">Cultural Journeys</h3>
+                    <p class="category-desc">History, heritage and local traditions</p>
+                    <div class="category-footer">
+                      <span class="category-count">27 tours</span>
+                      <span class="category-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="category-card" tabindex="0">
+              <a href="#" class="category-link" aria-label="Family Holidays — 15 tours available">
+                <div class="category-image">
+                  <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80" alt="Family walking on a tropical beach at sunset" loading="lazy" />
+                  <div class="category-overlay"></div>
+                </div>
+                <div class="category-body">
+                  <div class="category-body-inner">
+                    <h3 class="category-name">Family Holidays</h3>
+                    <p class="category-desc">Fun for every generation</p>
+                    <div class="category-footer">
+                      <span class="category-count">15 tours</span>
+                      <span class="category-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="category-card" tabindex="0">
+              <a href="#" class="category-link" aria-label="Cruise Experiences — 22 tours available">
+                <div class="category-image">
+                  <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800&q=80" alt="Luxury cruise ship sailing in crystal blue ocean" loading="lazy" />
+                  <div class="category-overlay"></div>
+                </div>
+                <div class="category-body">
+                  <div class="category-body-inner">
+                    <h3 class="category-name">Cruise Experiences</h3>
+                    <p class="category-desc">Ocean luxury around the world</p>
+                    <div class="category-footer">
+                      <span class="category-count">22 tours</span>
+                      <span class="category-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== LIMITED PROMOTIONS ===== -->
+      <section class="section section-promo" id="promotions">
+        <div class="container">
+          <div class="promo-card">
+            <div class="promo-bg"></div>
+            <div class="promo-content">
+              <span class="promo-badge">🔥 Limited time offer</span>
+              <h2 class="promo-title">Early bird summer escapes</h2>
+              <p class="promo-desc">Book your dream vacation before July 15 and save up to 40% on premium packages. Exclusive deals on Maldives, Santorini, and Bali.</p>
+              <div class="promo-countdown" id="countdown">
+                <div class="countdown-item">
+                  <span class="countdown-value" id="countdownDays">14</span>
+                  <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                  <span class="countdown-value" id="countdownHours">08</span>
+                  <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                  <span class="countdown-value" id="countdownMinutes">42</span>
+                  <span class="countdown-label">Mins</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                  <span class="countdown-value" id="countdownSeconds">15</span>
+                  <span class="countdown-label">Secs</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary btn-large promo-cta">
+                View deals
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CUSTOMER TESTIMONIALS ===== -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="section-header section-header-center">
+            <span class="section-eyebrow">Testimonials</span>
+            <h2 class="section-title">What our travelers say</h2>
+          </div>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">"Every detail felt elevated — from the private transfers to the local guide who knew hidden gems we'd never find on our own."</blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)">MK</div>
+                <div class="testimonial-info">
+                  <strong class="testimonial-name">Mina & Leo</strong>
+                  <span class="testimonial-location">Singapore → Maldives</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">"The itinerary felt beautifully tailored to our interests. Velora made our anniversary trip absolutely unforgettable."</blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#7c3aed,#6d28d9)">AK</div>
+                <div class="testimonial-info">
+                  <strong class="testimonial-name">Amira K.</strong>
+                  <span class="testimonial-location">Dubai → Santorini</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">"This felt more like a private concierge than a travel booking. Every recommendation was spot-on. Already planning our next trip."</blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0f766e,#115e59)">DR</div>
+                <div class="testimonial-info">
+                  <strong class="testimonial-name">Daniel R.</strong>
+                  <span class="testimonial-location">London → Patagonia</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">"Our family trip to Bali was seamless. The kids loved the activities, and we loved the peace of mind knowing everything was handled."</blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background:linear-gradient(135deg,#ea580c,#c2410c)">ST</div>
+                <div class="testimonial-info">
+                  <strong class="testimonial-name">Sarah T.</strong>
+                  <span class="testimonial-location">Melbourne → Bali</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TRAVEL BLOG ===== -->
+      <section class="section section-alt" id="blog">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">Travel blog</span>
+              <h2 class="section-title">Inspiration for your next journey</h2>
+            </div>
+            <a href="#" class="btn btn-outline btn-small">All articles →</a>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card blog-card-featured" tabindex="0">
+              <div class="blog-image">
+                <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=1200&q=80" alt="Traveler on mountain viewpoint" loading="lazy" />
+                <span class="blog-category">Guides</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span class="blog-date">June 12, 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h3 class="blog-title">10 hidden gems in Southeast Asia you need to visit in 2026</h3>
+                <p class="blog-excerpt">From secret beaches in Thailand to untouched islands in Indonesia — our local experts reveal the destinations that should be on your radar.</p>
+                <a href="#" class="blog-link">Read article →</a>
+              </div>
+            </article>
+            <article class="blog-card" tabindex="0">
+              <div class="blog-image">
+                <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=800&q=80" alt="Luxury resort infinity pool" loading="lazy" />
+                <span class="blog-category">Luxury</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span class="blog-date">June 8, 2026</span>
+                  <span class="blog-read-time">5 min read</span>
+                </div>
+                <h3 class="blog-title">The ultimate guide to luxury travel in the Maldives</h3>
+                <p class="blog-excerpt">Overwater villas, private dining, and the best resorts for an unforgettable escape.</p>
+                <a href="#" class="blog-link">Read article →</a>
+              </div>
+            </article>
+            <article class="blog-card" tabindex="0">
+              <div class="blog-image">
+                <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=800&q=80" alt="Traveler backpacking" loading="lazy" />
+                <span class="blog-category">Tips</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span class="blog-date">June 3, 2026</span>
+                  <span class="blog-read-time">6 min read</span>
+                </div>
+                <h3 class="blog-title">How to plan a multi-country trip without the stress</h3>
+                <p class="blog-excerpt">Expert tips on routing, packing, visas, and making the most of every destination.</p>
+                <a href="#" class="blog-link">Read article →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== NEWSLETTER ===== -->
+      <section class="section" id="newsletter">
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-content">
+              <span class="section-eyebrow">Stay inspired</span>
+              <h2 class="newsletter-title">Receive first access to handpicked journeys</h2>
+              <p class="newsletter-desc">Monthly inspiration, curated stays, and exclusive offers delivered to your inbox.</p>
+              <form class="newsletter-form" aria-label="Newsletter subscription">
+                <div class="newsletter-input-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <input type="email" placeholder="Enter your email address" required aria-label="Email address" />
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+              <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+            </div>
+            <div class="newsletter-visual" aria-hidden="true">
+              <div class="newsletter-illustration">
+                <div class="nl-plane">✈️</div>
+                <div class="nl-dot nl-dot-1"></div>
+                <div class="nl-dot nl-dot-2"></div>
+                <div class="nl-dot nl-dot-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== PREMIUM FOOTER ===== -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a class="footer-brand" href="/">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="16" cy="16" r="15" fill="url(#logoGrad2)" />
+                <path d="M10 18l4-8 4 8" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M8 20h16" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                <defs><linearGradient id="logoGrad2" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+              </svg>
+              Velora
+            </a>
+            <p class="footer-desc">Premium travel experiences crafted with care. We believe every journey should be extraordinary.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Company</h4>
+            <a href="#" class="footer-link">About us</a>
+            <a href="#" class="footer-link">Careers</a>
+            <a href="#" class="footer-link">Press</a>
+            <a href="#" class="footer-link">Partners</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Support</h4>
+            <a href="#" class="footer-link">Help center</a>
+            <a href="#" class="footer-link">Contact us</a>
+            <a href="#" class="footer-link">Cancellation</a>
+            <a href="#" class="footer-link">Safety info</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Legal</h4>
+            <a href="#" class="footer-link">Privacy policy</a>
+            <a href="#" class="footer-link">Terms of service</a>
+            <a href="#" class="footer-link">Cookie policy</a>
+            <a href="#" class="footer-link">Accessibility</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Contact</h4>
+            <a href="mailto:hello@velora.com" class="footer-link">hello@velora.com</a>
+            <a href="tel:+18001234567" class="footer-link">+1 (800) 123-4567</a>
+            <span class="footer-address">123 Travel Street, Suite 400<br />New York, NY 10001</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Velora. All rights reserved.</span>
+          <div class="footer-payment">
+            <span>We accept</span>
+            <span class="payment-badge">Visa</span>
+            <span class="payment-badge">MC</span>
+            <span class="payment-badge">Amex</span>
+            <span class="payment-badge">PayPal</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== AUTH MODAL — Premium Split Layout ===== -->
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+      <div class="auth-modal-backdrop" data-close="true"></div>
+      <div class="auth-panel" role="dialog" aria-modal="true" aria-label="Authentication">
+
+        <button class="auth-close" type="button" data-close="true" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+        </button>
+
+        <!-- LEFT: Immersive travel visual -->
+        <div class="auth-visual" aria-hidden="true">
+          <div class="auth-visual-bg">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=85" alt="" loading="lazy" />
+            <div class="auth-visual-overlay"></div>
+          </div>
+          <div class="auth-visual-content">
+            <div class="auth-visual-badge">✦ Exclusive member access</div>
+            <h2 class="auth-visual-title">Travel further.<br />Stay smarter.</h2>
+            <p class="auth-visual-desc">Join Velora and unlock premium travel experiences curated by local experts.</p>
+            <ul class="auth-visual-benefits">
+              <li class="auth-visual-benefit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Exclusive discounts up to 40%
+              </li>
+              <li class="auth-visual-benefit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Personalized recommendations
+              </li>
+              <li class="auth-visual-benefit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                One-click booking & priority support
+              </li>
+            </ul>
+            <div class="auth-visual-trust">
+              <div class="auth-visual-trust-item">
+                <span class="auth-visual-trust-value">★ 4.9</span>
+                <span class="auth-visual-trust-label">Avg. rating</span>
+              </div>
+              <div class="auth-visual-trust-divider"></div>
+              <div class="auth-visual-trust-item">
+                <span class="auth-visual-trust-value">120K+</span>
+                <span class="auth-visual-trust-label">Travelers</span>
+              </div>
+              <div class="auth-visual-trust-divider"></div>
+              <div class="auth-visual-trust-item">
+                <span class="auth-visual-trust-value">99%</span>
+                <span class="auth-visual-trust-label">Satisfied</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Authentication form -->
+        <div class="auth-form-col">
+          <div class="auth-form-inner">
+            <!-- Brand -->
+            <div class="auth-form-brand">
+              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="16" cy="16" r="15" fill="url(#authLogoGrad)" />
+                <path d="M10 18l4-8 4 8" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M8 20h16" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                <defs><linearGradient id="authLogoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+              </svg>
+              <span>Velora</span>
+            </div>
+
+            <div id="formMessage" class="auth-form-message" aria-live="polite"></div>
+
+            <!-- Animated tabs -->
+            <div class="auth-tabs" role="tablist" aria-label="Authentication mode">
+              <div class="auth-tabs-track">
+                <button class="auth-tab active" data-target="loginForm" type="button" role="tab" aria-selected="true">Sign in</button>
+                <button class="auth-tab" data-target="registerForm" type="button" role="tab" aria-selected="false">Create account</button>
+                <div class="auth-tab-indicator" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <!-- Forms container -->
+            <div class="auth-forms">
+              <!-- LOGIN FORM -->
+              <form id="loginForm" class="auth-form active" method="post" action="/login" novalidate>
+                <div class="auth-form-heading">
+                  <h3 class="auth-form-title">Welcome back</h3>
+                  <p class="auth-form-subtitle">Sign in to continue your journey.</p>
+                </div>
+
+                <div class="auth-social-row">
+                  <button class="auth-social-btn auth-social-google" type="button" aria-label="Continue with Google">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    <span>Google</span>
+                  </button>
+                  <button class="auth-social-btn auth-social-apple" type="button" aria-label="Continue with Apple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="currentColor"/></svg>
+                    <span>Apple</span>
+                  </button>
+                </div>
+
+                <div class="auth-divider">
+                  <span class="auth-divider-line"></span>
+                  <span class="auth-divider-text">or continue with email</span>
+                  <span class="auth-divider-line"></span>
+                </div>
+
+                <div class="auth-field">
+                  <div class="auth-field-input-wrap">
+                    <svg class="auth-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <input id="modalLoginEmail" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+                  </div>
+                  <div class="auth-field-error" data-error-for="modalLoginEmail"></div>
+                </div>
+
+                <div class="auth-field">
+                  <div class="auth-field-input-wrap">
+                    <svg class="auth-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <input id="modalLoginPassword" name="password" type="password" placeholder="Password" autocomplete="current-password" required />
+                    <button class="auth-field-visibility" type="button" data-toggle-password="modalLoginPassword" aria-label="Show password" title="Show password">
+                      <svg class="auth-eye-icon auth-eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                      <svg class="auth-eye-icon auth-eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    </button>
+                  </div>
+                  <div class="auth-field-error" data-error-for="modalLoginPassword"></div>
+                </div>
+
+                <div class="auth-row">
+                  <label class="auth-checkbox" for="rememberMe">
+                    <input id="rememberMe" name="remember" type="checkbox" checked />
+                    <span class="auth-checkbox-mark"></span>
+                    <span>Remember me</span>
+                  </label>
+                  <a href="#" class="auth-forgot">Forgot password?</a>
+                </div>
+
+                <button class="auth-cta" type="submit">
+                  <span class="auth-cta-content">
+                    <span class="auth-cta-text">Sign in</span>
+                    <svg class="auth-cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                  </span>
+                  <span class="auth-cta-loader" aria-hidden="true">
+                    <svg class="auth-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+                    <span>Signing in...</span>
+                  </span>
+                </button>
+              </form>
+
+              <!-- REGISTER FORM -->
+              <form id="registerForm" class="auth-form" method="post" action="/register" novalidate>
+                <div class="auth-form-heading">
+                  <h3 class="auth-form-title">Create your account</h3>
+                  <p class="auth-form-subtitle">Join 120,000+ travelers worldwide.</p>
+                </div>
+
+                <div class="auth-social-row">
+                  <button class="auth-social-btn auth-social-google" type="button" aria-label="Continue with Google">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    <span>Google</span>
+                  </button>
+                  <button class="auth-social-btn auth-social-apple" type="button" aria-label="Continue with Apple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="currentColor"/></svg>
+                    <span>Apple</span>
+                  </button>
+                </div>
+
+                <div class="auth-divider">
+                  <span class="auth-divider-line"></span>
+                  <span class="auth-divider-text">or sign up with email</span>
+                  <span class="auth-divider-line"></span>
+                </div>
+
+                <div class="auth-field">
+                  <div class="auth-field-input-wrap">
+                    <svg class="auth-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <input id="modalFullName" name="fullName" type="text" placeholder="Full name" autocomplete="name" required />
+                  </div>
+                  <div class="auth-field-error" data-error-for="modalFullName"></div>
+                </div>
+
+                <div class="auth-field">
+                  <div class="auth-field-input-wrap">
+                    <svg class="auth-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <input id="modalRegisterEmail" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+                  </div>
+                  <div class="auth-field-error" data-error-for="modalRegisterEmail"></div>
+                </div>
+
+                <div class="auth-field">
+                  <div class="auth-field-input-wrap">
+                    <svg class="auth-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <input id="modalRegisterPassword" name="password" type="password" placeholder="Create a password" autocomplete="new-password" required />
+                    <button class="auth-field-visibility" type="button" data-toggle-password="modalRegisterPassword" aria-label="Show password" title="Show password">
+                      <svg class="auth-eye-icon auth-eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                      <svg class="auth-eye-icon auth-eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    </button>
+                  </div>
+                  <div class="auth-field-error" data-error-for="modalRegisterPassword"></div>
+                </div>
+
+                <div class="auth-strength" aria-live="polite">
+                  <div class="auth-strength-bar"><span id="strengthFill"></span></div>
+                  <div id="strengthLabel" class="auth-strength-label">Add 8+ characters</div>
+                </div>
+
+                <div class="auth-field">
+                  <div class="auth-field-input-wrap">
+                    <svg class="auth-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <input id="modalConfirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" autocomplete="new-password" required />
+                  </div>
+                  <div class="auth-field-error" data-error-for="modalConfirmPassword"></div>
+                </div>
+
+                <label class="auth-checkbox auth-checkbox-terms" for="acceptTerms">
+                  <input id="acceptTerms" name="acceptTerms" type="checkbox" required />
+                  <span class="auth-checkbox-mark"></span>
+                  <span>I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.</span>
+                </label>
+
+                <button class="auth-cta" type="submit">
+                  <span class="auth-cta-content">
+                    <span class="auth-cta-text">Create account</span>
+                    <svg class="auth-cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                  </span>
+                  <span class="auth-cta-loader" aria-hidden="true">
+                    <svg class="auth-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+                    <span>Creating account...</span>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      // ===== NAVBAR SCROLL BEHAVIOR =====
+      const navbar = document.getElementById('navbar');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 80) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+        lastScroll = currentScroll;
+      });
+
+      // ===== MOBILE NAV =====
+      const hamburger = document.getElementById('navHamburger');
+      const navMobile = document.getElementById('navMobile');
+
+      hamburger?.addEventListener('click', () => {
+        const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isOpen);
+        navMobile.classList.toggle('open', !isOpen);
+        navMobile.setAttribute('aria-hidden', isOpen);
+        document.body.classList.toggle('no-scroll', !isOpen);
+      });
+
+      navMobile?.querySelectorAll('.nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.setAttribute('aria-expanded', 'false');
+          navMobile.classList.remove('open');
+          navMobile.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('no-scroll');
+        });
+      });
+
+      // ===== COUNTDOWN TIMER =====
+      function startCountdown() {
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 14);
+        endDate.setHours(23, 59, 59, 0);
+
+        function update() {
+          const now = new Date();
+          const diff = endDate - now;
+          if (diff <= 0) return;
+
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+          document.getElementById('countdownDays').textContent = String(days).padStart(2, '0');
+          document.getElementById('countdownHours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('countdownMinutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('countdownSeconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        update();
+        setInterval(update, 1000);
+      }
+      startCountdown();
+
+      // ===== SCROLL ANIMATIONS (Intersection Observer) =====
+      const animateElements = document.querySelectorAll('.destination-card, .tour-card, .feature-card, .category-card, .testimonial-card, .blog-card, .promo-card');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      animateElements.forEach(el => observer.observe(el));
+
+      // ===== AUTH MODAL (preserved from original) =====
+      const modal = document.getElementById('authModal');
+      const toggles = document.querySelectorAll('.auth-toggle');
+      const tabs = document.querySelectorAll('.auth-tab');
+      const forms = document.querySelectorAll('.auth-form');
+      const authButton = document.getElementById('authButton');
+      const authControls = document.getElementById('authControls');
+      const userMenuWrapper = document.getElementById('userMenuWrapper');
+      const userMenuButton = document.getElementById('userMenuButton');
+      const userDropdown = document.getElementById('userDropdown');
+      const userNameLabel = document.getElementById('userNameLabel');
+      const userAvatar = document.getElementById('userAvatar');
+      const logoutButton = document.getElementById('logoutButton');
+      const formMessage = document.getElementById('formMessage');
+      const strengthFill = document.getElementById('strengthFill');
+      const strengthLabel = document.getElementById('strengthLabel');
+      const state = { user: null };
+
+      function getInitials(name) {
+        const parts = (name || '').trim().split(/\s+/).filter(Boolean);
+        if (parts.length === 0) return 'U';
+        if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+        return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+      }
+
+      function getAvatarColor(name) {
+        const colors = ['#2563eb', '#7c3aed', '#0f766e', '#ea580c', '#db2777'];
+        const index = (name || '').length % colors.length;
+        return colors[index];
+      }
+
+      function updateAuthNav(user) {
+        state.user = user;
+        if (user) {
+          authControls?.classList.add('hidden');
+          userMenuWrapper?.classList.remove('hidden');
+          userMenuWrapper?.setAttribute('aria-hidden', 'false');
+          userNameLabel.textContent = user.fullName || user.email || 'Traveler';
+          userAvatar.textContent = getInitials(user.fullName || user.email || 'Traveler');
+          userAvatar.style.background = `linear-gradient(135deg, ${getAvatarColor(user.fullName || user.email || 'Traveler')}, #111827)`;
+        } else {
+          authControls?.classList.remove('hidden');
+          userMenuWrapper?.classList.add('hidden');
+          userMenuWrapper?.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      function showFormMessage(message, type = 'info') {
+        if (!formMessage) return;
+        formMessage.innerHTML = message;
+        formMessage.className = `auth-form-message ${type}`;
+      }
+
+      function clearFieldErrors() {
+        document.querySelectorAll('.field-error').forEach(error => {
+          error.textContent = '';
+        });
+      }
+
+      function setFieldError(fieldId, message) {
+        const errorNode = document.querySelector(`[data-error-for="${fieldId}"]`);
+        if (errorNode) {
+          errorNode.textContent = message;
+        }
+      }
+
+      function setActiveForm(targetId) {
+        forms.forEach(form => form.classList.toggle('active', form.id === targetId));
+        tabs.forEach(tab => {
+          const isActive = tab.dataset.target === targetId;
+          tab.classList.toggle('active', isActive);
+          tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+      }
+
+      function openModal(mode = 'login') {
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+        const target = mode === 'register' ? 'registerForm' : 'loginForm';
+        setActiveForm(target);
+        clearFieldErrors();
+        showFormMessage('');
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+      }
+
+      function togglePassword(targetId, button) {
+        const field = document.getElementById(targetId);
+        if (!field) return;
+        const isHidden = field.type === 'password';
+        field.type = isHidden ? 'text' : 'password';
+        if (isHidden) {
+          button.classList.add('showing');
+          button.setAttribute('aria-label', 'Hide password');
+          button.title = 'Hide password';
+        } else {
+          button.classList.remove('showing');
+          button.setAttribute('aria-label', 'Show password');
+          button.title = 'Show password';
+        }
+      }
+
+      function updateStrength(password) {
+        if (!strengthFill || !strengthLabel) return;
+        let score = 0;
+        if (password.length >= 8) score += 1;
+        if (password.length >= 12) score += 1;
+        if (/[A-Z]/.test(password) && /[0-9]/.test(password)) score += 1;
+        if (/[^A-Za-z0-9]/.test(password)) score += 1;
+
+        const widths = ['0%', '30%', '60%', '85%', '100%'];
+        const labels = ['Very weak', 'Weak', 'Fair', 'Good', 'Strong'];
+        const colors = ['#f97316', '#f97316', '#f59e0b', '#10b981', '#2563eb'];
+
+        const level = Math.min(score, 4);
+        strengthFill.style.width = widths[level];
+        strengthFill.style.background = colors[level];
+        strengthLabel.textContent = labels[level];
+      }
+
+      function toggleUserDropdown(force) {
+        const isHidden = userDropdown.classList.contains('hidden');
+        const shouldOpen = typeof force === 'boolean' ? force : isHidden;
+        userDropdown.classList.toggle('hidden', !shouldOpen);
+        userDropdown.setAttribute('aria-hidden', shouldOpen ? 'false' : 'true');
+        userMenuButton.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+      }
+
+      async function loadCurrentUser() {
+        try {
+          const response = await fetch('/me', { credentials: 'include' });
+          const data = await response.json().catch(() => ({}));
+          if (response.ok && data.user) {
+            updateAuthNav(data.user);
+          } else {
+            updateAuthNav(null);
+          }
+        } catch {
+          updateAuthNav(null);
+        }
+      }
+
+      toggles.forEach(btn => btn.addEventListener('click', () => openModal(btn.dataset.mode)));
+      tabs.forEach(tab => tab.addEventListener('click', () => setActiveForm(tab.dataset.target)));
+
+      document.querySelectorAll('.field-visibility').forEach(button => {
+        button.addEventListener('click', () => togglePassword(button.dataset.togglePassword, button));
+      });
+
+      const registerPassword = document.getElementById('modalRegisterPassword');
+      registerPassword?.addEventListener('input', event => updateStrength(event.target.value));
+
+      modal.addEventListener('click', event => {
+        if (event.target.dataset.close === 'true') closeModal();
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && modal.classList.contains('open')) {
+          closeModal();
+          toggleUserDropdown(false);
+        }
+      });
+
+      userMenuButton?.addEventListener('click', event => {
+        event.stopPropagation();
+        toggleUserDropdown();
+      });
+      logoutButton?.addEventListener('click', async () => {
+        try {
+          const response = await fetch('/logout', { method: 'POST', credentials: 'include' });
+          if (response.ok) {
+            updateAuthNav(null);
+            toggleUserDropdown(false);
+            showFormMessage('You are signed out.', 'success');
+          }
+        } catch {
+          showFormMessage('Could not sign you out right now.', 'error');
+        }
+      });
+
+      document.addEventListener('click', event => {
+        if (!userMenuWrapper?.contains(event.target)) {
+          toggleUserDropdown(false);
+        }
+      });
+
+      function validateLoginForm(form) {
+        const errors = {};
+        const email = form.querySelector('#modalLoginEmail').value.trim();
+        const password = form.querySelector('#modalLoginPassword').value.trim();
+        if (!email) errors.modalLoginEmail = 'Please enter your email.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.modalLoginEmail = 'Please enter a valid email.';
+        if (!password) errors.modalLoginPassword = 'Please enter your password.';
+        Object.entries(errors).forEach(([fieldId, message]) => setFieldError(fieldId, message));
+        return Object.keys(errors).length === 0;
+      }
+
+      function validateRegisterForm(form) {
+        const errors = {};
+        const fullName = form.querySelector('#modalFullName').value.trim();
+        const email = form.querySelector('#modalRegisterEmail').value.trim();
+        const password = form.querySelector('#modalRegisterPassword').value.trim();
+        const confirmPassword = form.querySelector('#modalConfirmPassword').value.trim();
+        const terms = form.querySelector('#acceptTerms').checked;
+
+        if (!fullName) errors.modalFullName = 'Please enter your full name.';
+        if (!email) errors.modalRegisterEmail = 'Please enter your email.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.modalRegisterEmail = 'Please enter a valid email.';
+        if (!password) errors.modalRegisterPassword = 'Please create a password.';
+        else if (password.length < 8) errors.modalRegisterPassword = 'Choose at least 8 characters.';
+        if (!confirmPassword) errors.modalConfirmPassword = 'Please confirm your password.';
+        else if (password && password !== confirmPassword) errors.modalConfirmPassword = 'Passwords do not match.';
+        if (!terms) showFormMessage('Please accept the terms and privacy policy.', 'error');
+
+        Object.entries(errors).forEach(([fieldId, message]) => setFieldError(fieldId, message));
+        return Object.keys(errors).length === 0 && terms;
+      }
+
+      forms.forEach(form => form.addEventListener('submit', async event => {
+        event.preventDefault();
+        clearFieldErrors();
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalText = submitButton?.textContent || 'Submit';
+        const isValid = form.id === 'loginForm' ? validateLoginForm(form) : validateRegisterForm(form);
+        if (!isValid) return;
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Please wait...';
+        }
+
+        try {
+          const body = new URLSearchParams(new FormData(form)).toString();
+          const response = await fetch(form.action, {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body
+          });
+          const data = await response.json().catch(() => ({}));
+
+          if (response.ok && data.success) {
+            updateAuthNav(data.user);
+            showFormMessage(`✓ ${data.message || 'Success!'}`, 'success');
+            closeModal();
+            toggleUserDropdown(false);
+          } else if (data.errors) {
+            Object.entries(data.errors).forEach(([fieldId, message]) => setFieldError(fieldId, message));
+            showFormMessage(data.message || 'Please check your details and try again.', 'error');
+          } else {
+            showFormMessage(data.message || 'Please check your details and try again.', 'error');
+          }
+        } catch {
+          showFormMessage('We could not reach the server right now. Please try again.', 'error');
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+          }
+        }
+      }));
+
+      authButton?.addEventListener('click', () => {
+        openModal('login');
+      });
+
+      loadCurrentUser();
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closeModal();
+      });
+    </script>
+  </body>
+</html>
